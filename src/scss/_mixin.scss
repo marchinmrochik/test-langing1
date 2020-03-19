@@ -1,0 +1,19 @@
+@mixin text-font($ff, $fw) {
+  font-family: $ff;
+  font-weight: $fw;
+}
+
+@mixin text-style($fs, $lh, $ls, $color) {
+  font-size: $fs;
+  line-height: $lh;
+  letter-spacing: $ls;
+  color: $color;
+}
+
+@mixin rotate($degrees) {
+  -webkit-transform: rotate($degrees);
+  -moz-transform: rotate($degrees);
+  -ms-transform: rotate($degrees);
+  -o-transform: rotate($degrees);
+  transform: rotate($degrees);
+}
