@@ -1,0 +1,51 @@
+header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.header {
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.logo {
+  &__box {
+    display: flex;
+    align-items: center;
+    text-decoration: none!important;
+  }
+
+  &__text {
+    @include text-style(60px, normal, 700, $san-marino);
+    padding-top: 7px;
+    margin-left: 18px;
+  }
+}
+
+.nav {
+  padding-top: 20px;
+
+  &__list {
+    padding-left: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+  }
+
+  &__item {
+    padding-right: 39px;
+
+    &:nth-last-child(1) {
+      padding-right: 0;
+    }
+  }
+
+  &__link {
+    @include text-style(18px, 24px, 400, $ship-gray);
+    text-decoration: none!important;
+    border-bottom: 2px dotted;
+  }
+}

@@ -1,19 +1,19 @@
-@mixin text-font($ff, $fw) {
-  font-family: $ff;
-  font-weight: $fw;
-}
-
-@mixin text-style($fs, $lh, $ls, $color) {
+@mixin text-style($fs, $lh, $fw, $color) {
   font-size: $fs;
   line-height: $lh;
-  letter-spacing: $ls;
+  font-weight: $fw;
   color: $color;
 }
 
-@mixin rotate($degrees) {
-  -webkit-transform: rotate($degrees);
-  -moz-transform: rotate($degrees);
-  -ms-transform: rotate($degrees);
-  -o-transform: rotate($degrees);
-  transform: rotate($degrees);
+@mixin placeholder {
+  ::-webkit-input-placeholder {@content}
+  :-moz-placeholder           {@content}
+  ::-moz-placeholder          {@content}
+  :-ms-input-placeholder      {@content}
+}
+
+@mixin box-shadow($bs) {
+  -moz-box-shadow:    $bs;
+  -webkit-box-shadow: $bs;
+  box-shadow:         $bs;
 }

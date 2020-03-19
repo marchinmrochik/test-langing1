@@ -62,7 +62,6 @@ function dev(){
     watch('src/scss/*.scss', css);
     watch('src/js/**/*.js', js);
     watch('src/assets/*', images);
-    watch('src/fonts/*', fonts);
 }
 function build(){
     return series(clean, parallel(js, css), images, html);
