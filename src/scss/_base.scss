@@ -14,6 +14,14 @@ ul {
   margin: auto;
 }
 
+.box__btn {
+  width: 220px;
+  height: 69px;
+  border-radius: 5px;
+  background: $curious-blue;
+  @include box-shadow(2.177px 8.733px 21.5px rgba(90,86,149,0.32));
+}
+
 .btn {
   background-image: linear-gradient(180deg, $curious-blue 0%, $picton-blue 100%);
   width: 100%;
@@ -25,19 +33,7 @@ ul {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  position: relative;
-  z-index: 10;
   @include text-style(27px, 23px, 900, $white);
-  @include box-shadow(2.177px 8.733px 21.5px rgba(90,86,149,0.32));
-
-  &:after {
-    @extend %position-context;
-    width: 100%;
-    height: 5px;
-    border-radius: 5px;
-    background: $curious-blue;
-    z-index: 0;
-  }
 
   span {
     font-size: 20px;
@@ -46,7 +42,7 @@ ul {
 }
 
 .input {
-  width: calc(100% - 65px);
+  width: calc(100% - 67px);
   display: flex;
   align-items: center;
   padding-left: 55px;
@@ -89,12 +85,32 @@ ul {
   }
 }
 
+.bg {
+  &_woman {
+    background: url("../assets/image-woman.png") no-repeat;
+    width: 495px;
+    height: 703px;
+    position: absolute;
+    z-index: 0;
+    top: 15px;
+    left: 41%;
+  }
+
+  &_product {
+    background: url("../assets/image-product.png") no-repeat;
+    width: 480px;
+    height: 403px;
+    position: absolute;
+  }
+}
+
 .section {
   &__intro {
     background: url("../assets/bg.png") no-repeat;
     background-position-x: center;
     padding-top: 164px;
     padding-bottom: 124px;
+    position: relative;
   }
 
 }
@@ -104,6 +120,13 @@ ul {
     position: relative;
     display: flex;
     justify-content: space-between;
+    z-index: 5;
+  }
+
+  &_bg_product {
+    z-index: 2;
+    left: 32.5%;
+    bottom: -258px;
   }
 
   &__block {
@@ -112,18 +135,17 @@ ul {
     }
 
     &_order {
-      width: 230px;
+      width: 220px;
       border-radius: 4px;
       @include box-shadow(2.177px 8.733px 21.5px rgba(90,86,149,0.32));
       background-color: $white;
-      padding: 24px 20px 40px;
+      padding: 24px 25px 40px;
 
       .order {
         &__title {
           @include text-style(28px, 26px, 700, $san-marino-lighter);
           text-align: center;
           margin: 0;
-          padding: 0 5px;
         }
 
         &__price {
