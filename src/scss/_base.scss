@@ -421,6 +421,18 @@ ul {
     max-width: 600px;
   }
 
+  &__container {
+    position: relative;
+  }
+
+  &__bg_product {
+    top: -58px;
+    right: 38px;
+    width: 520px;
+    height: 447px;
+    background-size: cover;
+  }
+
   &__title_h2 {
     margin: 0;
 
@@ -434,5 +446,6 @@ ul {
     display: flex;
     flex-direction: column;
     margin-top: 32px;
+    margin-bottom: 48px;
   }
 }
