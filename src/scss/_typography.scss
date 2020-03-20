@@ -13,6 +13,10 @@ body {
     @include text-style(60px, 40px, 700, $ship-gray);
   }
 
+  &_h3 {
+    @include text-style(50px, 51px, 700, $baltic-sea);
+  }
+
   &_h4 {
     @include text-style(49px, 50px, 700, $baltic-sea);
   }
