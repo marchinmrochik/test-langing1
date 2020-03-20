@@ -167,6 +167,13 @@ ul {
     padding-top: 124px;
     padding-bottom: 180px;
   }
+
+  &__preview_product {
+    background: url("../assets/bg.png") no-repeat;
+    background-position-x: center;
+    padding-top: 40px;
+    padding-bottom: 36px;
+  }
 }
 
 .intro {
@@ -177,7 +184,7 @@ ul {
     z-index: 5;
   }
 
-  &_bg_product {
+  &__bg_product {
     z-index: 2;
     left: 32.5%;
     bottom: -258px;
@@ -406,5 +413,26 @@ ul {
         }
       }
     }
+  }
+}
+
+.preview_product {
+  &__block {
+    max-width: 600px;
+  }
+
+  &__title_h2 {
+    margin: 0;
+
+    span {
+      color: $san-marino-lighter;
+    }
+  }
+
+  &__text {
+    @include text-style(28px, normal, 400, $ship-gray);
+    display: flex;
+    flex-direction: column;
+    margin-top: 32px;
   }
 }
