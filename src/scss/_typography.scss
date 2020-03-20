@@ -7,18 +7,34 @@ body {
 .title {
   &_h1 {
     @include text-style(64px, 65px, 700, $ship-gray);
+    
+    @media (max-width: 574px) {
+      @include text-style(56px, 56px, 700, $ship-gray);
+    }
   }
 
   &_h2 {
     @include text-style(60px, 40px, 700, $ship-gray);
+
+    @media (max-width: 574px) {
+      @include text-style(52px, 52px, 700, $ship-gray);
+    }
   }
 
   &_h3 {
     @include text-style(50px, 51px, 700, $baltic-sea);
+
+    @media (max-width: 574px) {
+      @include text-style(42px, 42px, 700, $ship-gray);
+    }
   }
 
   &_h4 {
     @include text-style(49px, 50px, 700, $baltic-sea);
+
+    @media (max-width: 574px) {
+      @include text-style(41px, 40px, 700, $ship-gray);
+    }
   }
 
   &_sub {

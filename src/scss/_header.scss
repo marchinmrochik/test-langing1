@@ -9,6 +9,11 @@ header {
   &__container {
     display: flex;
     justify-content: space-between;
+
+    @media (max-width: 574px) {
+      flex-direction: column;
+      justify-content: center;
+    }
   }
 }
 
@@ -23,15 +28,32 @@ header {
     @include text-style(60px, normal, 700, $san-marino);
     padding-top: 7px;
     margin-left: 18px;
+    
+    @media (max-width: 474px) {
+      font-size: 50px;
+    }
   }
 }
 
 .nav {
   padding-top: 20px;
 
+  @media (max-width: 574px) {
+    padding-top: 10px;
+  }
+
   &__list {
     margin: 0;
     display: flex;
+
+    @media (max-width: 767px) {
+      display: block;
+    }
+
+    @media (max-width: 574px) {
+      display: flex;
+      justify-content: space-between;
+    }
   }
 
   &__item {
@@ -40,11 +62,19 @@ header {
     &:nth-last-child(1) {
       padding-right: 0;
     }
+
+    @media (max-width: 574px) {
+      padding-right: 0;
+    }
   }
 
   &__link {
     @include text-style(18px, 24px, 400, $ship-gray);
     text-decoration: none!important;
     border-bottom: 2px dotted;
+
+    @media (max-width: 374px) {
+      font-size: 16px;
+    }
   }
 }
