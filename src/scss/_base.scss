@@ -33,6 +33,7 @@ ul {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  cursor: pointer;
   @include text-style(27px, 23px, 900, $white);
 
   span {
