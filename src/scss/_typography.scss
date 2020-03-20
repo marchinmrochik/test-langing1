@@ -3,3 +3,13 @@
 body {
   font-family: 'Roboto', sans-serif;
 }
+
+.title {
+  &_h1 {
+    @include text-style(64px, 65px, 700, $ship-gray);
+  }
+
+  &_sub {
+    @include text-style(34px, normal, 500, $san-marino);
+  }
+}
